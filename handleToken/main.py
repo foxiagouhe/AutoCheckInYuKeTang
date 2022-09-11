@@ -110,14 +110,14 @@ if __name__ == '__main__':
                 user_data_list.append(user_data_json)
                 tencent.end()
                 logging.info("user " + user['name'] + ' execute success')
-                logging.info('sleep 45s')
-                time.sleep(45)
+                logging.info('sleep 1 min')
+                time.sleep(60)
             except Exception:
                 logging.info("user " + user['name'] + ' execute failed')
                 user_data_csv_list.insert(0, user)
                 tencent.end()
-                logging.info('sleep 45s')
-                time.sleep(45)
+                logging.info('sleep 1 min')
+                time.sleep(60)
 
     with open(path + "/data/user_data.json", 'w') as f:
         json.dump(user_data_list, f, ensure_ascii=False)
