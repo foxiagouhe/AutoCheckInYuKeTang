@@ -248,7 +248,7 @@ class yktThread(threading.Thread):
 if __name__ == '__main__':
     path = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     if not os.path.exists(path=path + '/log/' + str(datetime.date.today())):
-        os.mkdir(path=path + '/log/' + str(datetime.date.today()))
+        os.makedirs(name=path + '/log/' + str(datetime.date.today()))
     with open(path + '/data/user_data.json', 'r') as f:
         user_data_json = json.loads(f.read())
     threadList = []
