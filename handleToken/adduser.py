@@ -12,7 +12,7 @@ if __name__ == '__main__':
     url = 'https://changjiang.yuketang.cn/web'
     path = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     if not os.path.exists(path=path + '/log/' + str(datetime.date.today())):
-        os.mkdir(path=path + '/log/' + str(datetime.date.today()))
+        os.makedirs(name=path + '/log/' + str(datetime.date.today()))
 
     logging.getLogger().setLevel(logging.INFO)
     logging.basicConfig(
